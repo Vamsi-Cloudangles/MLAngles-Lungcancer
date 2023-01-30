@@ -22,9 +22,9 @@ pipeline{
                 sh 'python3 Data_Analysis.py'
             }
         }
-        stage("data cleaning"){
+        stage("data preprocessing"){
             steps{
-                sh 'python3 Data_Cleaning.py'
+                sh 'python3 Data_Preprocessing.py'
             }
         }
         stage("data visualization"){
@@ -42,9 +42,9 @@ pipeline{
                 sh 'python3 Feature_Selection.py'
             }
         }
-        stage("data preprocessing"){
+        stage("data splitting"){
             steps{
-                sh 'python3 Data_Preprocessing.py'
+                sh 'python3 Data_Splitting.py'
             }
         }
         stage("model selection"){
