@@ -2,10 +2,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings("ignore")
-from Data_Cleaning import data_cleaning
+from Data_Preprocessing import data_preprocessing
 
 def data_visualization():
-    dataset = data_cleaning()
+    dataset = data_preprocessing()
     for col in dataset.columns:
         if (len(dataset[col].unique()) > 5) and (col != 'Level'):
             fig,ax = plt.subplots(1,1, figsize=(5,4))

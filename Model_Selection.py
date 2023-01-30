@@ -1,4 +1,4 @@
-from Data_Preprocessing import data_preprocessing
+from Data_Splitting import data_splitting
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
@@ -13,7 +13,7 @@ import warnings
 warnings.filterwarnings("ignore")
 def model_selection():
     scores = []
-    x_train, x_test, y_train, y_test = data_preprocessing()
+    x_train, x_test, y_train, y_test = data_splitting()
     lr.fit(x_train, y_train)
     scores.append(lr.score(x_test, y_test))
     rfr.fit(x_train, y_train)
