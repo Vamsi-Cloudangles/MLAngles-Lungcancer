@@ -11,7 +11,7 @@ def model_selection():
     scores = []
     x_train, x_test, y_train, y_test = data_splitting()
     knc.fit(x_train, y_train)
-    scores.append(lr.score(x_test, y_test))
+    scores.append(knc.score(x_test, y_test))
     rfr.fit(x_train, y_train)
     scores.append(rfr.score(x_test, y_test))
     print(scores)
