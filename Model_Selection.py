@@ -1,8 +1,4 @@
 from Data_Splitting import data_splitting
-from sklearn.linear_model import LogisticRegression
-from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import StandardScaler
-lr = make_pipeline(StandardScaler(), LogisticRegression())
 from sklearn.ensemble import RandomForestClassifier
 rfr = RandomForestClassifier()
 from sklearn.neighbors import KNeighborsClassifier
@@ -14,7 +10,7 @@ warnings.filterwarnings("ignore")
 def model_selection():
     scores = []
     x_train, x_test, y_train, y_test = data_splitting()
-    lr.fit(x_train, y_train)
+    knc.fit(x_train, y_train)
     scores.append(lr.score(x_test, y_test))
     rfr.fit(x_train, y_train)
     scores.append(rfr.score(x_test, y_test))
