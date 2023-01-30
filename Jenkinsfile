@@ -4,12 +4,12 @@ pipeline{
     stages{
         stage("Checkout"){
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Vamsi-Cloudangles/Dimond_new.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Vamsi-Cloudangles/MLAngles-Lungcancer.git']]])
             }
         }
         stage("build"){
             steps{
-                git branch: 'main', url: 'https://github.com/Vamsi-Cloudangles/Dimond_new.git'
+                git branch: 'main', url: 'https://github.com/Vamsi-Cloudangles/MLAngles-Lungcancer.git'
             }
         }
         stage("load data"){
@@ -49,7 +49,7 @@ pipeline{
         }
         stage("model selection"){
             steps{
-                sh 'pyhton3 Model_Selection.py'
+                sh 'python3 Model_Selection.py'
             }
         }
         
