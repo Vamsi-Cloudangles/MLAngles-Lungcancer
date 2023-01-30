@@ -49,7 +49,7 @@ pipeline{
         }
         stage("model selection"){
             steps{
-                sh 'pyhton3 Model_Selection.py'
+                sh 'python3 Model_Selection.py'
             }
         }
         
