@@ -5,5 +5,6 @@ def data_preprocessing():
     for col in dataset.columns:
         dataset = dataset.rename(columns = {col: col.replace(" ", "_")})
     print(dataset.columns)
+    print(dataset.head())
     return dataset
 data_preprocessing()
