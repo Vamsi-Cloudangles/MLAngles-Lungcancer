@@ -55,8 +55,9 @@ pipeline{
         
     }
     post{
-        always{
-            emailext body:"summery", subject: "Pipeline Status", to: 'vamsi.muramreddy@cloudangles.com'
+       
+        always {
+            archiveArtifacts artifacts: 'best_model.pkl', onlyIfSuccessful: true
         }
     }
 }
