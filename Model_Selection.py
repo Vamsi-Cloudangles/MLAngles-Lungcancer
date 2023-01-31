@@ -25,7 +25,7 @@ def model_selection():
     print("recall = ", recall)
     print("accuracy = ", accuracy)
 # Creating the pickle file    
-    with open("model.pkl", 'wb') as p:
+    with open("best_model.pkl", 'wb') as p:
         pickle.dump(rfr,p)
     return scores
 model_selection()
