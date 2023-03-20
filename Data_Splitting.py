@@ -2,6 +2,7 @@ from Feature_Selection import feature_selection
 from sklearn.model_selection import train_test_split
 def data_splitting():
     dataset = feature_selection()
+    dataset.to_csv('cleaned_dataset.csv")
     x = dataset.drop(['level'], axis = 1)
     y = dataset.drop(x.columns, axis = 1)
     print(x.shape)
